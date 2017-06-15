@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BF263816B00F1A74F739E8F /* libPods-瀑布流.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB2BC7BD2A5A487A997EFAE /* libPods-瀑布流.a */; };
+		2E29132A1EA9D2BD009CB788 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2913291EA9D2BD009CB788 /* MeViewController.m */; };
 		2E2EBF9F1EA88505006A57EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBF9E1EA88505006A57EF /* main.m */; };
-		2E2EBFA21EA88505006A57EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBFA11EA88505006A57EF /* AppDelegate.m */; };
-		2E2EBFA51EA88505006A57EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBFA41EA88505006A57EF /* ViewController.m */; };
-		2E2EBFA81EA88505006A57EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EBFA61EA88505006A57EF /* Main.storyboard */; };
 		2E2EBFAA1EA88505006A57EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EBFA91EA88505006A57EF /* Assets.xcassets */; };
 		2E2EBFAD1EA88505006A57EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EBFAB1EA88505006A57EF /* LaunchScreen.storyboard */; };
 		2E2EBFB81EA88505006A57EF /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBFB71EA88505006A57EF /* ___Tests.m */; };
 		2E2EBFC31EA88505006A57EF /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBFC21EA88505006A57EF /* ___UITests.m */; };
+		2E2EBFE21EA889C4006A57EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBFE11EA889C4006A57EF /* AppDelegate.m */; };
+		2E2EC0051EA88AAF006A57EF /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EC0021EA88AAF006A57EF /* DiscoverViewController.m */; };
+		2E2EC0081EA88B0F006A57EF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EC0071EA88B0F006A57EF /* MainViewController.m */; };
+		2E2EC00E1EA8B8E3006A57EF /* DisCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EC00C1EA8B8E3006A57EF /* DisCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +38,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2913281EA9D2BD009CB788 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		2E2913291EA9D2BD009CB788 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		2E2EBF9A1EA88504006A57EF /* 瀑布流.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "瀑布流.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2EBF9E1EA88505006A57EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2E2EBFA01EA88505006A57EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2E2EBFA11EA88505006A57EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2E2EBFA31EA88505006A57EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2E2EBFA41EA88505006A57EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2E2EBFA71EA88505006A57EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2E2EBFA91EA88505006A57EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E2EBFA91EA88505006A57EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		2E2EBFAC1EA88505006A57EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2E2EBFAE1EA88505006A57EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2EBFAE1EA88505006A57EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		2E2EBFB31EA88505006A57EF /* 瀑布流Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "瀑布流Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2EBFB71EA88505006A57EF /* ___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___Tests.m"; sourceTree = "<group>"; };
 		2E2EBFB91EA88505006A57EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E2EBFBE1EA88505006A57EF /* 瀑布流UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "瀑布流UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2EBFC21EA88505006A57EF /* ___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___UITests.m"; sourceTree = "<group>"; };
 		2E2EBFC41EA88505006A57EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2EBFE01EA889C4006A57EF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E2EBFE11EA889C4006A57EF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E2EC0011EA88AAF006A57EF /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		2E2EC0021EA88AAF006A57EF /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		2E2EC0061EA88B0F006A57EF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2E2EC0071EA88B0F006A57EF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		2E2EC00A1EA8919B006A57EF /* MainPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPrefixHeader.pch; sourceTree = "<group>"; };
+		2E2EC00B1EA8B8E3006A57EF /* DisCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisCollectionViewCell.h; sourceTree = "<group>"; };
+		2E2EC00C1EA8B8E3006A57EF /* DisCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisCollectionViewCell.m; sourceTree = "<group>"; };
+		4D9AD566D97F1195903A666D /* Pods-瀑布流.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-瀑布流.debug.xcconfig"; path = "Pods/Target Support Files/Pods-瀑布流/Pods-瀑布流.debug.xcconfig"; sourceTree = "<group>"; };
+		ADB2BC7BD2A5A487A997EFAE /* libPods-瀑布流.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-瀑布流.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D513DD1473317138BA1E71 /* Pods-瀑布流.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-瀑布流.release.xcconfig"; path = "Pods/Target Support Files/Pods-瀑布流/Pods-瀑布流.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF263816B00F1A74F739E8F /* libPods-瀑布流.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		166217DC1BEA023885283D4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADB2BC7BD2A5A487A997EFAE /* libPods-瀑布流.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E2913241EA9D28E009CB788 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				2E2913261EA9D28E009CB788 /* Model */,
+				2E2913271EA9D28E009CB788 /* View */,
+				2E2913251EA9D28E009CB788 /* Controller */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		2E2913251EA9D28E009CB788 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E2913281EA9D2BD009CB788 /* MeViewController.h */,
+				2E2913291EA9D2BD009CB788 /* MeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E2913261EA9D28E009CB788 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E2913271EA9D28E009CB788 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2E2EBF911EA88504006A57EF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +139,8 @@
 				2E2EBFB61EA88505006A57EF /* 瀑布流Tests */,
 				2E2EBFC11EA88505006A57EF /* 瀑布流UITests */,
 				2E2EBF9B1EA88504006A57EF /* Products */,
+				832AADC185558BE8F1C651AF /* Pods */,
+				166217DC1BEA023885283D4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +157,10 @@
 		2E2EBF9C1EA88505006A57EF /* 瀑布流 */ = {
 			isa = PBXGroup;
 			children = (
-				2E2EBFA01EA88505006A57EF /* AppDelegate.h */,
-				2E2EBFA11EA88505006A57EF /* AppDelegate.m */,
-				2E2EBFA31EA88505006A57EF /* ViewController.h */,
-				2E2EBFA41EA88505006A57EF /* ViewController.m */,
-				2E2EBFA61EA88505006A57EF /* Main.storyboard */,
-				2E2EBFA91EA88505006A57EF /* Assets.xcassets */,
-				2E2EBFAB1EA88505006A57EF /* LaunchScreen.storyboard */,
-				2E2EBFAE1EA88505006A57EF /* Info.plist */,
+				2E2EBFDF1EA889C4006A57EF /* Other */,
+				2E2EBFF71EA88A66006A57EF /* 首页 */,
+				2E2EBFFF1EA88AAF006A57EF /* 发现 */,
+				2E2913241EA9D28E009CB788 /* 我的 */,
 				2E2EBF9D1EA88505006A57EF /* Supporting Files */,
 			);
 			path = "瀑布流";
@@ -140,6 +192,96 @@
 			path = "瀑布流UITests";
 			sourceTree = "<group>";
 		};
+		2E2EBFDF1EA889C4006A57EF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBFE01EA889C4006A57EF /* AppDelegate.h */,
+				2E2EBFE11EA889C4006A57EF /* AppDelegate.m */,
+				2E2EC00A1EA8919B006A57EF /* MainPrefixHeader.pch */,
+				2E2EBFA91EA88505006A57EF /* Assets.xcassets */,
+				2E2EBFAB1EA88505006A57EF /* LaunchScreen.storyboard */,
+				2E2EBFAE1EA88505006A57EF /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2E2EBFF71EA88A66006A57EF /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBFF91EA88A66006A57EF /* Model */,
+				2E2EBFFA1EA88A66006A57EF /* View */,
+				2E2EBFF81EA88A66006A57EF /* Controller */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		2E2EBFF81EA88A66006A57EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EC0061EA88B0F006A57EF /* MainViewController.h */,
+				2E2EC0071EA88B0F006A57EF /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E2EBFF91EA88A66006A57EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E2EBFFA1EA88A66006A57EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E2EBFFF1EA88AAF006A57EF /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EC0031EA88AAF006A57EF /* Model */,
+				2E2EC0041EA88AAF006A57EF /* View */,
+				2E2EC0001EA88AAF006A57EF /* Controller */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		2E2EC0001EA88AAF006A57EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EC0011EA88AAF006A57EF /* DiscoverViewController.h */,
+				2E2EC0021EA88AAF006A57EF /* DiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E2EC0031EA88AAF006A57EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E2EC0041EA88AAF006A57EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EC00B1EA8B8E3006A57EF /* DisCollectionViewCell.h */,
+				2E2EC00C1EA8B8E3006A57EF /* DisCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		832AADC185558BE8F1C651AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D9AD566D97F1195903A666D /* Pods-瀑布流.debug.xcconfig */,
+				C2D513DD1473317138BA1E71 /* Pods-瀑布流.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E2EBFC71EA88505006A57EF /* Build configuration list for PBXNativeTarget "瀑布流" */;
 			buildPhases = (
+				2BF797A12905F884CF0736F6 /* [CP] Check Pods Manifest.lock */,
 				2E2EBF961EA88504006A57EF /* Sources */,
 				2E2EBF971EA88504006A57EF /* Frameworks */,
 				2E2EBF981EA88504006A57EF /* Resources */,
+				E93DBA4023A38BF2BB3DD103 /* [CP] Embed Pods Frameworks */,
+				3F4EFAA46B41E896E48B81AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +393,6 @@
 			files = (
 				2E2EBFAD1EA88505006A57EF /* LaunchScreen.storyboard in Resources */,
 				2E2EBFAA1EA88505006A57EF /* Assets.xcassets in Resources */,
-				2E2EBFA81EA88505006A57EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,14 +412,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BF797A12905F884CF0736F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F4EFAA46B41E896E48B81AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-瀑布流/Pods-瀑布流-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E93DBA4023A38BF2BB3DD103 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-瀑布流/Pods-瀑布流-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2E2EBF961EA88504006A57EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E2EBFA51EA88505006A57EF /* ViewController.m in Sources */,
-				2E2EBFA21EA88505006A57EF /* AppDelegate.m in Sources */,
+				2E29132A1EA9D2BD009CB788 /* MeViewController.m in Sources */,
 				2E2EBF9F1EA88505006A57EF /* main.m in Sources */,
+				2E2EC0051EA88AAF006A57EF /* DiscoverViewController.m in Sources */,
+				2E2EBFE21EA889C4006A57EF /* AppDelegate.m in Sources */,
+				2E2EC0081EA88B0F006A57EF /* MainViewController.m in Sources */,
+				2E2EC00E1EA8B8E3006A57EF /* DisCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,20 +506,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2E2EBFA61EA88505006A57EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E2EBFA71EA88505006A57EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2E2EBFAB1EA88505006A57EF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2E2EBFAC1EA88505006A57EF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -420,9 +608,13 @@
 		};
 		2E2EBFC81EA88505006A57EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D9AD566D97F1195903A666D /* Pods-瀑布流.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "瀑布流/Other/MainPrefixHeader.pch";
 				INFOPLIST_FILE = "瀑布流/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,9 +623,13 @@
 		};
 		2E2EBFC91EA88505006A57EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D513DD1473317138BA1E71 /* Pods-瀑布流.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "瀑布流/Other/MainPrefixHeader.pch";
 				INFOPLIST_FILE = "瀑布流/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +701,7 @@
 				2E2EBFC91EA88505006A57EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E2EBFCA1EA88505006A57EF /* Build configuration list for PBXNativeTarget "瀑布流Tests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +710,7 @@
 				2E2EBFCC1EA88505006A57EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E2EBFCD1EA88505006A57EF /* Build configuration list for PBXNativeTarget "瀑布流UITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +719,7 @@
 				2E2EBFCF1EA88505006A57EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
