@@ -50,7 +50,7 @@
     //tabBar
     UITabBarController *tabBar = [[UITabBarController alloc]init];
     tabBar.viewControllers = @[mainNavi,disNavi,meNavi];
-    tabBar.tabBar.tintColor = [UIColor blackColor];
+    tabBar.tabBar.tintColor = [UIColor orangeColor];
     tabBar.tabBar.barTintColor = [UIColor whiteColor];
     tabBar.selectedIndex = 1;
     
