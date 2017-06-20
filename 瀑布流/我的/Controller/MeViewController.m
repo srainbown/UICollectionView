@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = RGBACOLOR(255, 255, 255, 1);
+    self.view.backgroundColor = K_RGBACOLOR(255, 255, 255, 1);
     
     _webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:_webView];
