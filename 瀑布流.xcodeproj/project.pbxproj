@@ -63,6 +63,7 @@
 		2E2EC00C1EA8B8E3006A57EF /* DisCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisCollectionViewCell.m; sourceTree = "<group>"; };
 		3E9035E81FFCBBAA00D6C26F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		3E9035E91FFCBBAA00D6C26F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		42C98ED820031463005EAFB6 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		4D9AD566D97F1195903A666D /* Pods-瀑布流.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-瀑布流.debug.xcconfig"; path = "Pods/Target Support Files/Pods-瀑布流/Pods-瀑布流.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB2BC7BD2A5A487A997EFAE /* libPods-瀑布流.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-瀑布流.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D513DD1473317138BA1E71 /* Pods-瀑布流.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-瀑布流.release.xcconfig"; path = "Pods/Target Support Files/Pods-瀑布流/Pods-瀑布流.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +188,7 @@
 				2E2EBFE01EA889C4006A57EF /* AppDelegate.h */,
 				2E2EBFE11EA889C4006A57EF /* AppDelegate.m */,
 				2E2EC00A1EA8919B006A57EF /* MainPrefixHeader.pch */,
+				42C98ED820031463005EAFB6 /* Note.h */,
 				2E2EBFA91EA88505006A57EF /* Assets.xcassets */,
 				2E2EBFAB1EA88505006A57EF /* LaunchScreen.storyboard */,
 				2E2EBFAE1EA88505006A57EF /* Info.plist */,
