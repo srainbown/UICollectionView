@@ -18,6 +18,7 @@
 		2E2EC0051EA88AAF006A57EF /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EC0021EA88AAF006A57EF /* DiscoverViewController.m */; };
 		2E2EC0081EA88B0F006A57EF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EC0071EA88B0F006A57EF /* MainViewController.m */; };
 		2E2EC00E1EA8B8E3006A57EF /* DisCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EC00C1EA8B8E3006A57EF /* DisCollectionViewCell.m */; };
+		3E9035EA1FFCBBAA00D6C26F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9035E91FFCBBAA00D6C26F /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		2E2EC00A1EA8919B006A57EF /* MainPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPrefixHeader.pch; sourceTree = "<group>"; };
 		2E2EC00B1EA8B8E3006A57EF /* DisCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisCollectionViewCell.h; sourceTree = "<group>"; };
 		2E2EC00C1EA8B8E3006A57EF /* DisCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisCollectionViewCell.m; sourceTree = "<group>"; };
+		3E9035E81FFCBBAA00D6C26F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		3E9035E91FFCBBAA00D6C26F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		4D9AD566D97F1195903A666D /* Pods-瀑布流.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-瀑布流.debug.xcconfig"; path = "Pods/Target Support Files/Pods-瀑布流/Pods-瀑布流.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB2BC7BD2A5A487A997EFAE /* libPods-瀑布流.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-瀑布流.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D513DD1473317138BA1E71 /* Pods-瀑布流.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-瀑布流.release.xcconfig"; path = "Pods/Target Support Files/Pods-瀑布流/Pods-瀑布流.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,8 +105,8 @@
 		2E2913241EA9D28E009CB788 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				2E2913261EA9D28E009CB788 /* Model */,
-				2E2913271EA9D28E009CB788 /* View */,
+				3E9035E71FFCBAC500D6C26F /* Model */,
+				3E9035E61FFCBAC100D6C26F /* View */,
 				2E2913251EA9D28E009CB788 /* Controller */,
 			);
 			path = "我的";
@@ -116,20 +119,6 @@
 				2E2913291EA9D2BD009CB788 /* MeViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		2E2913261EA9D28E009CB788 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2E2913271EA9D28E009CB788 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		2E2EBF911EA88504006A57EF = {
@@ -208,8 +197,8 @@
 		2E2EBFF71EA88A66006A57EF /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
-				2E2EBFF91EA88A66006A57EF /* Model */,
-				2E2EBFFA1EA88A66006A57EF /* View */,
+				3E9035E41FFCBA9C00D6C26F /* Model */,
+				3E9035E31FFCBA9100D6C26F /* View */,
 				2E2EBFF81EA88A66006A57EF /* Controller */,
 			);
 			path = "首页";
@@ -224,24 +213,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		2E2EBFF91EA88A66006A57EF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2E2EBFFA1EA88A66006A57EF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		2E2EBFFF1EA88AAF006A57EF /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
-				2E2EC0031EA88AAF006A57EF /* Model */,
+				3E9035E51FFCBAAE00D6C26F /* Model */,
 				2E2EC0041EA88AAF006A57EF /* View */,
 				2E2EC0001EA88AAF006A57EF /* Controller */,
 			);
@@ -253,15 +228,10 @@
 			children = (
 				2E2EC0011EA88AAF006A57EF /* DiscoverViewController.h */,
 				2E2EC0021EA88AAF006A57EF /* DiscoverViewController.m */,
+				3E9035E81FFCBBAA00D6C26F /* SecondViewController.h */,
+				3E9035E91FFCBBAA00D6C26F /* SecondViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		2E2EC0031EA88AAF006A57EF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2E2EC0041EA88AAF006A57EF /* View */ = {
@@ -271,6 +241,41 @@
 				2E2EC00C1EA8B8E3006A57EF /* DisCollectionViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3E9035E31FFCBA9100D6C26F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E9035E41FFCBA9C00D6C26F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E9035E51FFCBAAE00D6C26F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E9035E61FFCBAC100D6C26F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E9035E71FFCBAC500D6C26F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		832AADC185558BE8F1C651AF /* Pods */ = {
@@ -468,6 +473,7 @@
 				2E29132A1EA9D2BD009CB788 /* MeViewController.m in Sources */,
 				2E2EBF9F1EA88505006A57EF /* main.m in Sources */,
 				2E2EC0051EA88AAF006A57EF /* DiscoverViewController.m in Sources */,
+				3E9035EA1FFCBBAA00D6C26F /* SecondViewController.m in Sources */,
 				2E2EBFE21EA889C4006A57EF /* AppDelegate.m in Sources */,
 				2E2EC0081EA88B0F006A57EF /* MainViewController.m in Sources */,
 				2E2EC00E1EA8B8E3006A57EF /* DisCollectionViewCell.m in Sources */,

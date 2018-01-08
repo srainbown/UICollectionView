@@ -48,6 +48,7 @@
 
 #import "DiscoverViewController.h"
 #import "DisCollectionViewCell.h"
+#import "SecondViewController.h"
 
 static NSString *cellId = @"cellId";
 
@@ -144,5 +145,23 @@ static NSString *cellId = @"cellId";
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return CGSizeMake(100, 100);
 }
+
+//item选中操作
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSLog(@"选中了第%ld个",indexPath.row);
+    SecondViewController *vc = [[SecondViewController alloc]init];
+    //push到二级页面隐藏TabBar
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+//item取消选中操作
+-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    //先选中A,再选中B，此时显示选中B，取消选中A
+    NSLog(@"取消选中第%ld个",indexPath.row);
+}
+
+
 
 @end
