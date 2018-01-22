@@ -28,7 +28,7 @@
  自定义布局: 只要了解5个方法（重写它方法，扩展功能）
  
  1.   什么时候调用:collectionView第一次布局,collectionView刷新的时候也会调用
-    作用:计算cell的布局，条件:ell的位置是固定不变的.
+    作用:计算cell的布局，条件:cell的位置是固定不变的.
  - (void)prepareLayout;
  
  2.   作用:指定一段区域给你这段区域cell的尺寸(可以一次性返回所有cell尺寸,也可以每隔一个距离返回cell)
@@ -54,6 +54,7 @@ static NSString *cellId = @"cellId";
 
 @interface DiscoverViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
+@property (nonatomic ,strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
@@ -64,13 +65,17 @@ static NSString *cellId = @"cellId";
     [super viewDidLoad];
     self.view.backgroundColor = K_RGBACOLOR(255, 255, 255, 1);
     
-    
-    //collectionView
-    [self.view addSubview:self.collectionView];
     //注册cell的类型
     [self registerClass];
-    
+    [self getData];
+}
 
+#pragma mark -- 懒加载
+-(NSMutableArray *)dataArray{
+    if (_dataArray == nil) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
 }
 
 #pragma mark -- 懒加载
@@ -79,11 +84,11 @@ static NSString *cellId = @"cellId";
     if (_collectionView == nil) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         //设置区的内边距
-        layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
+        layout.sectionInset = UIEdgeInsetsMake(1, 1, 1, 1);
         //设置2个item之间的最小间隙
-        layout.minimumInteritemSpacing = 10;
+        layout.minimumInteritemSpacing = 1;
         //设置行之间的最小间距
-        layout.minimumLineSpacing = 15;
+        layout.minimumLineSpacing = 1;
         //设置滚动方向，默认是垂直滚动
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
         
@@ -93,14 +98,13 @@ static NSString *cellId = @"cellId";
 ////        //设置footerView的大小
 //        layout.footerReferenceSize = CGSizeMake(50, 50);
         
-        
         _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         //设置代理
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:_collectionView];
     }
-    
     return _collectionView;
 }
 
@@ -108,60 +112,61 @@ static NSString *cellId = @"cellId";
 -(void)registerClass{
 
     [self.collectionView registerClass:[DisCollectionViewCell class] forCellWithReuseIdentifier:cellId];
-
     //根据kind分辨是头 还是 尾
     //注册headerView
 //    [self.collectionView registerNib:[] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@""]
     //注册footerView
 //        [self.collectionView registerNib:[] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@""]
-    
+}
+
+#pragma mark -- 请求数据
+-(void)getData{
+    for (int i = 0; i < 15; i++) {
+        [self.dataArray addObject:[UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0]];
+    }
+    [self.collectionView reloadData];
 }
 
 #pragma mark -- UICollectionViewDataSource
 //分组
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    
     return 1;
 }
 
 //每组多少个item
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 25;
+    return self.dataArray.count;
 }
 
 //item内容
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     DisCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
-    
     if (cell == nil) {
         cell = [[DisCollectionViewCell alloc]init];
     }
-    
+    cell.backgroundColor = self.dataArray[indexPath.row];
     return cell;
 }
 
+#pragma mark -- UICollectionViewDelegateFlowLayout
 //设置指定Indexpath的单元格大小(itemSize)
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(100, 100);
+    return CGSizeMake((K_Width - 3)/2, (K_Width - 3)/2);
 }
 
-//item选中操作
+#pragma mark -- UICollectionViewDelegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     NSLog(@"选中了第%ld个",indexPath.row);
+    
     SecondViewController *vc = [[SecondViewController alloc]init];
+    vc.bgColor = self.dataArray[indexPath.row];
     //push到二级页面隐藏TabBar
     [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-//item取消选中操作
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-    //先选中A,再选中B，此时显示选中B，取消选中A
     NSLog(@"取消选中第%ld个",indexPath.row);
 }
-
-
-
 @end

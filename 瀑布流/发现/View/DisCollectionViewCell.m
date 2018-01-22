@@ -10,14 +10,8 @@
 
 @implementation DisCollectionViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
 //如果你需要更精确控制子view，而不是使用限制或autoresizing行为，就需要实现该方法
 -(void)layoutSubviews{
-
-    self.backgroundColor = [UIColor orangeColor];
     
 //    UIButton *btn = [[UIButton alloc]init];
 //    [self addSubview:btn];
@@ -55,8 +49,5 @@
 ////高等级系统系事件插入，列入来电等
 //-(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //}
-
-
-
 
 @end
