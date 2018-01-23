@@ -26,18 +26,17 @@
         _showLabel.font = [UIFont systemFontOfSize:22];
         _showLabel.textColor = [UIColor whiteColor];
         _showLabel.textAlignment = NSTextAlignmentCenter;
+        [_showLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.mas_equalTo(self);
+            make.centerY.mas_equalTo(self);
+            make.width.height.mas_equalTo(@100);
+        }];
     }
     return self;
 }
 
 //如果你需要更精确控制子view，而不是使用限制或autoresizing行为，就需要实现该方法
 -(void)layoutSubviews{
-    [_showLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self);
-        make.centerY.mas_equalTo(self);
-        make.width.height.mas_equalTo(@100);
-    }];
- 
 //    //实现这些方法覆盖你的view如何与其他view对齐布局
 //    [self alignmentRectForFrame:CGRectMake(0, 0, 0, 0)];
 //    [self frameForAlignmentRect:CGRectMake(0, 0, 0, 0)];
@@ -63,7 +62,6 @@
     self.backgroundColor = model.bgColor;
     _showLabel.text = [NSString stringWithFormat:@"%@",model.title];
 }
-
 
 //
 //-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

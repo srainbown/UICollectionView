@@ -6,7 +6,6 @@
 //  Copyright © 2017年 View. All rights reserved.
 //
 
-
 /*
  UICollectionView 使用说明
  
@@ -21,7 +20,6 @@
  
 4.      FlowLayout自定义（调整cell尺寸，利用布局就做效果），原因：系统cell中每个item尺寸都一样;(继承flowLayout 或 Layout)。
  @interface LNFlowLayout : UICollectionViewFlowLayout
- 
  
  ******************************************************************************
  
@@ -49,9 +47,10 @@
 #import "DiscoverViewController.h"
 #import "DisCollectionViewCell.h"
 #import "SecondViewController.h"
+#import "ZoneViewController.h"
 #import "DiscoverModel.h"
 
-static NSString *cellId = @"cellId";
+static NSString *mainCellId = @"mainCellId";
 
 @interface DiscoverViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -112,7 +111,7 @@ static NSString *cellId = @"cellId";
 //注册cell的类型
 -(void)registerClass{
 
-    [self.collectionView registerClass:[DisCollectionViewCell class] forCellWithReuseIdentifier:cellId];
+    [self.collectionView registerClass:[DisCollectionViewCell class] forCellWithReuseIdentifier:mainCellId];
     //根据kind分辨是头 还是 尾
     //注册headerView
 //    [self.collectionView registerNib:[] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@""]
@@ -124,12 +123,11 @@ static NSString *cellId = @"cellId";
 -(void)getData{
     for (int i = 0; i < 15; i++) {
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-        [dic setObject:[NSString stringWithFormat:@"%d",i] forKey:@"title"];
+        [dic setObject:[NSString stringWithFormat:@"第%d个",i] forKey:@"title"];
         [dic setObject:[UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0] forKey:@"bgColor"];
         DiscoverModel *model = [[DiscoverModel alloc]initWithDic:dic];
         [self.dataArray addObject:model];
     }
-    
     [self.collectionView reloadData];
 }
 
@@ -138,19 +136,13 @@ static NSString *cellId = @"cellId";
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
-
 //每组多少个item
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.dataArray.count;
 }
-
 //item内容
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    DisCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
-//    if (cell == nil) {
-//        cell = [[DisCollectionViewCell alloc]init];
-//    }
+    DisCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:mainCellId forIndexPath:indexPath];
     if (self.dataArray.count > 0) {
         cell.model = self.dataArray[indexPath.row];
     }
@@ -165,16 +157,20 @@ static NSString *cellId = @"cellId";
 
 #pragma mark -- UICollectionViewDelegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"选中了第%ld个",indexPath.row);
     
-    SecondViewController *vc = [[SecondViewController alloc]init];
-    vc.model = self.dataArray[indexPath.row];
-    //push到二级页面隐藏TabBar
-    [vc setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (0 == indexPath.row % 2) {
+        ZoneViewController *zoneVc = [[ZoneViewController alloc]init];
+        //push到二级页面隐藏TabBar
+        [zoneVc setHidesBottomBarWhenPushed:YES];
+        zoneVc.model = self.dataArray[indexPath.row];
+        [self.navigationController pushViewController:zoneVc animated:YES];
+    }else{
+        SecondViewController *secondVc = [[SecondViewController alloc]init];
+        //push到二级页面隐藏TabBar
+        [secondVc setHidesBottomBarWhenPushed:YES];
+        secondVc.model = self.dataArray[indexPath.row];
+        [self.navigationController pushViewController:secondVc animated:YES];
+    }
 }
 
--(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"取消选中第%ld个",indexPath.row);
-}
 @end
