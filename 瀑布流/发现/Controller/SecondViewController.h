@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DiscoverModel.h"
 @interface SecondViewController : UIViewController
 
-@property (nonatomic, strong) UIColor *bgColor;
+@property (nonatomic, strong) DiscoverModel *model;
 
 @end

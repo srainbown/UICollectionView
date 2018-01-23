@@ -49,6 +49,7 @@
 #import "DiscoverViewController.h"
 #import "DisCollectionViewCell.h"
 #import "SecondViewController.h"
+#import "DiscoverModel.h"
 
 static NSString *cellId = @"cellId";
 
@@ -122,8 +123,13 @@ static NSString *cellId = @"cellId";
 #pragma mark -- 请求数据
 -(void)getData{
     for (int i = 0; i < 15; i++) {
-        [self.dataArray addObject:[UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0]];
+        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+        [dic setObject:[NSString stringWithFormat:@"%d",i] forKey:@"title"];
+        [dic setObject:[UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0] forKey:@"bgColor"];
+        DiscoverModel *model = [[DiscoverModel alloc]initWithDic:dic];
+        [self.dataArray addObject:model];
     }
+    
     [self.collectionView reloadData];
 }
 
@@ -142,10 +148,12 @@ static NSString *cellId = @"cellId";
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     DisCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[DisCollectionViewCell alloc]init];
+//    if (cell == nil) {
+//        cell = [[DisCollectionViewCell alloc]init];
+//    }
+    if (self.dataArray.count > 0) {
+        cell.model = self.dataArray[indexPath.row];
     }
-    cell.backgroundColor = self.dataArray[indexPath.row];
     return cell;
 }
 
@@ -160,7 +168,7 @@ static NSString *cellId = @"cellId";
     NSLog(@"选中了第%ld个",indexPath.row);
     
     SecondViewController *vc = [[SecondViewController alloc]init];
-    vc.bgColor = self.dataArray[indexPath.row];
+    vc.model = self.dataArray[indexPath.row];
     //push到二级页面隐藏TabBar
     [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];

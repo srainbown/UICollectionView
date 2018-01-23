@@ -7,16 +7,37 @@
 //
 
 #import "DisCollectionViewCell.h"
+#import "DiscoverModel.h"
+
+@interface DisCollectionViewCell()
+
+@property (nonatomic ,strong)UILabel *showLabel;
+
+@end
 
 @implementation DisCollectionViewCell
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _showLabel = [[UILabel alloc]init];
+        [self addSubview:_showLabel];
+        _showLabel.font = [UIFont systemFontOfSize:22];
+        _showLabel.textColor = [UIColor whiteColor];
+        _showLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return self;
+}
+
 //如果你需要更精确控制子view，而不是使用限制或autoresizing行为，就需要实现该方法
 -(void)layoutSubviews{
-    
-//    UIButton *btn = [[UIButton alloc]init];
-//    [self addSubview:btn];
-
-
+    [_showLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self);
+        make.centerY.mas_equalTo(self);
+        make.width.height.mas_equalTo(@100);
+    }];
+ 
 //    //实现这些方法覆盖你的view如何与其他view对齐布局
 //    [self alignmentRectForFrame:CGRectMake(0, 0, 0, 0)];
 //    [self frameForAlignmentRect:CGRectMake(0, 0, 0, 0)];
@@ -36,9 +57,14 @@
 //    //跟踪view(即将或已经)移动到另一个window
 //    [self willMoveToWindow:[[UIWindow alloc]init]];
 //    [self didMoveToWindow];
-   
-
 }
+
+-(void)setModel:(DiscoverModel *)model{
+    self.backgroundColor = model.bgColor;
+    _showLabel.text = [NSString stringWithFormat:@"%@",model.title];
+}
+
+
 //
 //-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //}

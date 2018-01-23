@@ -17,12 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if (_bgColor == nil) {
+    if (_model == nil) {
         self.view.backgroundColor = [UIColor whiteColor];
     }else{
-        self.view.backgroundColor = _bgColor;
+        self.title = _model.title;
+        self.view.backgroundColor = _model.bgColor;
     }
 }
-
 
 @end

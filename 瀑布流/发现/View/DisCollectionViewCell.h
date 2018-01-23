@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DiscoverModel;
+
 @interface DisCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) DiscoverModel *model;
 
 @end
